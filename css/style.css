@@ -1,0 +1,1058 @@
+/*-- Reset --*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    line-height: calc(1em + 0.5rem);
+}
+
+/* Gør billeder responsive */
+/* Display-blok og maksimal bredde på 100% for billeder */
+img 
+{
+    display: block;
+    max-width: 100%;
+}
+
+/* Definer farvevariabler for konsistent brug i hele dokumentet */
+:root {
+    --clr-black: #0c0a09;
+    --clr-white: #f5f5f4;
+    --clr-grey: rgb(165, 165, 165);
+}
+
+/*-- General styling --*/
+
+/* Justering af rulning på HTML-elementet for en glidende scrolling-effekt */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basal styling for hele dokumentets body */
+/* Skrifttype, vægt, baggrundsfarve og tekstfarve for hele dokumentets body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    background-color: var(--clr-white);
+    color: var(--clr-black);
+}
+
+/* Justering af typografi for almindelige afsnit */
+p {
+    font-weight: 300;
+}
+
+/* Fjern understregning og tilpas farve til links */
+a {
+    text-decoration: none;
+    color: var(--clr-white);
+}
+
+/* Vægtjustering for overskrifter h1, h2, h3 */
+h1,
+h2,
+h3 {
+    font-weight: 200;
+}
+
+/*-- Tilbage knappen --*/
+
+/* Tilbage-knap styling, fast position, bundplacering, justering i forhold til viewport, skjult som standard, farver, polstring, afrunding af hjørner, markør ved pegefingercursor */
+#toTopBtn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    background-color: var(--clr-grey); 
+    color: var(--clr-white); 
+    border: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover-effekt for tilbage-knap, ændring af baggrundsfarve ved hover */
+#toTopBtn:hover {
+    background-color: var(--clr-black); 
+}
+
+/*--Error page--*/
+
+/* Error page styling, flex-container, kolonnejustering, centerjustering, polstring */
+.errorpage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4em 1em 0 1em;
+}
+
+/* Error page overskriftsstyling, stor fontstørrelse */
+.errorpage h1 {
+    font-size: 3em;
+}
+
+/* Error page tekststyling, topmargin og fontstørrelse */
+.errorpage p {
+    margin-top: 2em;
+    font-size: 1.5rem;
+}
+
+/*-- Header --*/
+
+/* Top navigation styling, skjult overflow, baggrundsfarve, polstring */
+.navmenu {
+    overflow: hidden;
+    background-color: rgb(165, 165, 165);
+    padding: 1rem;
+}
+
+/* Top navigation billede styling, bredde, display og højre polstring */
+.navmenu img {
+    width: 130px;
+    display: block;
+    padding-right: 1rem;
+}
+
+/* Header ikon-container styling, flex-container, align-items, text-align og justify-content */
+.toplinje__icons {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: flex-end;
+}
+
+/* Top navigation links styling, venstre flydende, blokdisplay, farve, tekstjustering, ingen understregning og skriftstørrelse */
+.navmenu a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Aktivt link styling, baggrundsfarve og tekstfarve */
+.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Top navigation ikon styling, skjult som standard */
+.navmenu .icon {
+    display: none;
+}
+
+/* skjultmenu menu styling, venstre flydende og skjult overflow */
+.skjultmenu {
+    float: left;
+    overflow: hidden;
+}
+
+/* skjultmenu knap styling, skriftstørrelse, ingen kant og skriftfarve */
+.skjultmenu .skjulknap {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: auto;
+}
+
+/* skjultmenu indhold styling, skjult som standard, positionering, baggrundsfarve, minimumsbredde, skygge og z-indeksering */
+.skjultmenu-content {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-grey);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* skjultmenu link styling, flyd ikke, farve, polstring, ingen understregning, tekstjustering og blokdisplay */
+.skjultmenu-content a {
+    float: none;
+    color: var(--clr-white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Hover-effekt for top navigation links og skjultmenu knap, ændring af baggrundsfarve og tekstfarve ved hover */
+.navmenu a:hover,
+.skjultmenu:hover .skjulknap {
+    background-color: var(--clr-grey);
+    color: var(--clr-white);
+}
+
+/* Hover-effekt for skjultmenu links, ændring af tekstfarve ved hover */
+.skjultmenu-content a:hover {
+    color: var(--clr-black);
+}
+
+/* skjultmenu hover-effekt, visning af skjultmenu-indhold ved hover */
+.skjultmenu:hover .skjultmenu-content {
+    display: block;
+}
+
+/* Søge- og indkøbskurv styling, farve, baggrundsfarve, kantløs, bredde, højde, top- og bundmargen */
+.toplinje__search,
+.toplinje__shopping {
+    color: var(--clr-white);
+    background-color: var(--clr-grey);
+    border: none;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 8px 1rem 0 1rem;
+}
+
+/* Responsivt design til skærme under 768px bredde */
+@media screen and (max-width: 768px) {
+    /* Skjul top navigation links undtagen det første barn, skjultmenu knap og søgeikon samt indkøbskurv */
+    .navmenu a:not(:first-child),
+    .skjultmenu .skjulknap, 
+    .navmenu .toplinje__search {
+        display: none;
+    }
+
+    /* Vis ikon ved højre side for responsiv top navigation */
+    .navmenu a.icon {
+        float: right;
+        display: block;
+    }
+
+    /* Justering af header ikon-container for responsivitet */
+    .toplinje__icons {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    /* Responsiv top navigation layout */
+    .navmenu.responsive {
+        position: relative;
+    }
+
+    /* Justering af ikonposition for responsiv top navigation */
+    .navmenu.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    /* Visning af responsiv top navigation links, søgeikon og skjultmenu knap */
+    .navmenu.responsive a, 
+    .navmenu.navmenu.responsive .toplinje__search {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Responsiv skjultmenu layout */
+    .navmenu.responsive .skjultmenu {
+        float: none;
+    }
+
+    /* Positionering af responsiv skjultmenu indhold */
+    .navmenu.responsive .skjultmenu-content {
+        position: relative;
+    }
+
+    /* Responsiv skjultmenu knap layout */
+    .navmenu.responsive .skjultmenu .skjulknap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/*-- Hero kategori --*/
+
+/* Hero container styling, flex-container, kolonnejustering, centerjustering, tekstjustering, baggrundsbillede, baggrundsstørrelse og højde */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center center;
+    background-size: cover;
+    height: 300px;
+}
+
+/* Hero knap styling, baggrundsfarve, bredde, kantløs, polstring, overgang og markør ved pegefingercursor */
+.hero__button {
+    background-color: var(--clr-white);
+    width: 10em;
+    border: 1px solid var(--clr-white);
+    padding: 0.3em 1em;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+/* Hover-effekt for hero knap, ændring af baggrundsfarve og tekstfarve ved hover */
+.hero__button:hover {
+    background-color: transparent;
+    color: var(--clr-white);
+}
+
+/* Forsidebanner baggrundsbillede o */
+.hero.forside-banner {
+    background-image: url(../images/forsideimage.webp);
+}
+
+/*-- Bryg --*/
+
+/* Overskrift1 styling, farve, vægt, skrifttype, tekstjustering, fontstørrelse og polstring */
+#overskrift1 {
+    color: var(--clr-black);
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    padding: 4rem;
+}
+
+/* Øl container styling, flex-container, centerjustering, tekstjustering, og polstring */
+.øl_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Øl styling, blokdisplay, automatisk margen og justering i forhold til viewport */
+.øl {
+    display: block;
+    margin: auto;
+}
+
+/* Tekst-container1 og tekst-container2 styling, topmargin, farve, fontstørrelse, skrifttype og polstring */
+.text-container1,
+.text-container2 {
+    margin-top: 0.3rem;
+    color: #000000;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 2rem;
+}
+
+/* Yderligere padding for tekst-container1 */
+.text-container1 {
+    padding-bottom: 2rem;
+}
+
+/* Flere øl container styling, flex-container, centerjustering, tekstjustering og polstring */
+.flereøl_container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+/* Flere øl styling, blokdisplay og automatisk margen */
+.flereøl {
+    display: block;
+    margin: auto;
+}
+
+/* Underoverskrift1 styling, farve, fontstørrelse, polstring, skrifttype, vægt og tekstjustering */
+.underoverskrift1 {
+    color: var(--clr-black);
+    font-size: 1rem;
+    padding: 2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    text-align: center;
+}
+
+/* Center styling, tekstjustering i midten */
+.center {
+    text-align: center;
+}
+
+/* Grå knap styling, baggrundsfarve, skrifttype, vægt, bredde, polstring, kantløs, markør ved pegefingercursor, justering af indhold og bundmargin */
+.grey-button {
+    background-color: var(--clr-grey);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    width: 10em;
+    padding: 0.5em 2em;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+/* Hover-effekt på knappen, ændring af baggrundsfarve, tekstfarve og kant ved hover */
+.grey-button:hover {
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border: 2px solid var(--clr-white);
+}
+
+/* Overskrift2 styling, farve, vægt, skrifttype, tekstjustering, fontstørrelse og polstring */
+#overskrift2 {
+    color: var(--clr-black);
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem 0 0rem 0;
+}
+
+/* Billedgrid container styling, flex-container, centerjustering, tekstjustering, polstring og bundmargin */
+.bryg__kollage {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2rem;
+    margin-bottom: 4rem;
+}
+
+/* Billedgrid billede styling, bredde, blokdisplay, automatisk margen, polstring og objektfyldning */
+.bryg__kollage img {
+    width: 40rem;
+    margin: auto;
+    padding: 1.5rem 3.5rem;
+    object-fit: cover;
+}
+
+/* Billedgrid overskrift3 styling, farve, fontstørrelse, skrifttype, vægt, tekstjustering, polstring og bundmargen */
+.bryg__kollage h3 {
+    color: var(--clr-black);
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+/* Billedgrid knap styling, kantfarve, farve, baggrundsfarve, skrifttype, vægt, bredde, polstring, overgang og markør ved pegefingercursor */
+.bryg__kollage button {
+    border: 2px solid var(--clr-black);
+    color: var(--clr-black);
+    background-color: var(--clr-white);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    width: 10em;
+    padding: 0.3em 0;
+    transition: all 0.3s ease;
+}
+
+/* Hover-effekt på knappen, transformering ved hover */
+.bryg__kollage button:hover {
+    transform: translateY(-1px);
+}
+
+/* FilterSelect styling, blokdisplay, automatisk margen, baggrundsfarve, tekstjustering og centerjustering */
+#filterSelect {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--clr-white);
+    text-align: center;
+}
+
+  
+/*-- foot --*/
+
+/* foot menu styling, flex-container, justering af indhold, tekstjustering, polstring, toppmargin og baggrundsfarve */
+.foot__pages {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 30px;
+    background-color: var(--clr-grey);
+}
+
+/* Skjul anden foot-menu ved standard */
+.foot__pages2 {
+    display: none;
+}
+
+/* foot wrapper styling, maksimal bredde, fuld bredde, automatisk margen, fontstørrelse, polstring og baggrundsfarve */
+.foot__w {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    font-size: 0.75em;
+    padding: 1rem 2rem;
+    background-color: var(--clr-grey);
+}
+
+/* Skjul inputelementer */
+input {
+    display: none;
+}
+
+/* Label styling, flex-container, fuld bredde, højde, markør ved pegefingercursor, ingen kant, ingen brugerudvælgelse og tekstfarve */
+label {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    color: var(--clr-white);
+}
+
+/* Første barn af label styling, fuld bredde, linjehøjde, skriftstørrelse og padding */
+label div:first-child {
+    width: 100%;
+    line-height: 45px;
+    font-size: 1.2em;
+}
+
+/* kryds styling, højremargin, topmargin og pseudo-elementer for linjer */
+.kryds {
+    margin-right: 15px;
+    margin-top: 3px;
+}
+
+.kryds:before,
+.kryds:after {
+    content: '';
+    border-top: 2px solid var(--clr-white);
+    width: 15px;
+    display: block;
+    margin-top: 18px;
+    transition: 0.3s;
+}
+
+.kryds:after {
+    transform: rotate(90deg);
+    margin-top: -2px;
+}
+
+/* Indhold styling, skriftstørrelse, margin, maksimal højde, oversvømmelsesskjulning, overgang og overgangstid */
+.content {
+    font-size: 1.2em;
+    margin: 5px 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height, .5s;
+}
+
+/* Indhold link styling, fleks-container, margin og display-fleks */
+.content a {
+    display: flex;
+    margin: 15px 0 15px 25px;
+}
+
+/* Når input er markeret, vis indhold med maksimal højde og roter krydsets før */
+input:checked~.content {
+    max-height: 400px;
+    transition: max-height, 1s;
+}
+
+/* Når input er markeret, roter krydsets før pseudo-element */
+input:checked~label .kryds:before {
+    transform: rotate(180deg);
+}
+
+/* Når input er markeret, roter krydsets efter pseudo-element */
+input:checked~label .kryds:after {
+    transform: rotate(0deg);
+}
+
+/* Mobil navigation styling, position, top, venstre, z-index, fuld bredde, fuld højde, baggrundsfarve, skjul ved standard, justering af indhold, justering af elementer og tekstjustering */
+.mobil-nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-black);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Mobil navigation menu styling, ingen liste-stil, ingen polstring, flex-container, kolonnejustering, justering af indhold, mellemrum og markør ved pegefingercursor */
+.mobil-nav__menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Mobil navigation link styling, skriftstørrelse, ingen tekstudsmykning, skriftvægt, farve, bogstavafstand, overgang og farveovergangstid */
+.mobil-nav__link {
+    font-size: var(--size-sm);
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--clr-white);
+    letter-spacing: -0.05em;
+    transition: color 0.3s;
+}
+
+/* Mobil navigation link hover-effekt, farveændring ved hover */
+.mobil-nav__link:hover {
+    color: var(--clr-white);
+}
+
+/* Mobil navigation søgeknapp styling, bredde, højde, baggrundsfarve, farve, ingen kant og ingen tekstudsmykning */
+.mobil-nav__search {
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: var(--clr-black);
+    color: var(--clr-white);
+    border: none;
+    display: block;
+}
+
+/* Mobil navigation indkøbskurv-knap styling, visning som blok, bredde, højde, farve, baggrundsfarve, ingen kant og ingen tekstudsmykning */
+.mobil-nav__shopping {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    color: var(--clr-white);
+    background-color: var(--clr-black);
+    border: none;
+}
+
+/*-- Øl & Ernæring --*/
+
+/* Fremhævet hero-sektion styling, flex-container, centerjustering, tekstjustering og midtjustering af elementer */
+.øl__hero {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+/* Hero-billedstyling, fuld bredde, objektdækning og højde */
+.øl__hero img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Hero tekststyling, skriftstørrelse og polstring */
+.øl__hero p {
+    font-size: 1em;
+    padding: 2em;
+}
+
+/* Billede slider styling, polstring, relativ positionering og overgangseffekt */
+.img-slider {
+    padding: 2rem 0 2rem 0;
+    position: relative;
+}
+
+/* Slider wrapper styling, bredde, automatisk margen, overflodskjulning og overgangseffekt */
+.slider-wrapper {
+    width: calc(100% - 50px);
+    margin: 0 auto;
+    overflow: auto;
+}
+
+/* Billede container styling, flex-container, overgangseffekt på transformering */
+.img-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Billede styling, blokdisplay, bredde, højremargin, objektdækning og maksimal højde */
+.img-container img {
+    display: block;
+    width: calc(98% / 3);
+    margin-right: 1%;
+    object-fit: cover;
+    max-height: 550px;
+}
+
+/* Alkoholfri øl billede1 styling, maksimal bredde, automatisk højde, blokdisplay og margin */
+.image1 {
+    max-width: 170%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Alkoholfri øl billede2 styling, maksimal bredde, automatisk højde, blokdisplay og margin */
+.image2 {
+    max-width: 170%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Alkoholfri øl billede3 styling, maksimal bredde, automatisk højde, blokdisplay og margin */
+.image3 {
+    max-width: 170%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Alkoholfri øl billede4 styling, maksimal bredde, automatisk højde, blokdisplay og margin */
+.image4 {
+    max-width: 170%;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Billede-container styling, gitterdisplay, justering af elementer, gitterkolonner, polstring, automatisk margen og maksimal bredde */
+.image-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    margin: auto;
+    grid-gap: 10%;
+    max-width: 750px;
+}
+
+/* Anden kolonne i billede-container styling, venstre marginjustering og relativ positionering */
+.image-container .column2 {
+    margin-left: -10px;
+    position: relative;
+}
+
+/* Billede øl1 styling, maksimal bredde, bundpolstring og topmargin */
+.image-øl1 {
+    max-width: 75%;
+    padding-bottom: 6rem;
+    margin-top: 60%;
+}
+
+/* Billede øl2 styling, maksimal bredde, bundpolstring og topmargin */
+.image-øl2 {
+    max-width: 70%;
+    padding-bottom: 6rem;
+    margin-top: 35%;
+}
+
+/* Billede øl3 styling, maksimal bredde, bundpolstring og topmargin */
+.image-øl3 {
+    max-width: 75%;
+    padding-bottom: 6rem;
+    margin-top: 20%;
+}
+
+/* Billede øl4 styling, maksimal bredde, bundpolstring og topmargin */
+.image-øl4 {
+    max-width: 75%;
+    padding-bottom: 6rem;
+    margin-top: 25%;
+}
+
+/*-- Media Queries --*/
+
+@media screen and (min-width:425px) {
+    .øl__hero p {
+     padding: 0em 3em;
+    }
+}
+
+/*-- Mobile --*/
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+
+/* Ændr layoutet til en to-kolonner grid i .bryg__kollage sektionen */
+    .bryg__kollage {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+/* Juster padding af .text-container1 sektionen */
+    .text-container1 {
+        padding-bottom: 1.5rem;
+    }
+
+/* Anvend generel polstring til flere sektioner */
+    .øl_container,
+    .flereøl_container,
+    .text-container1,
+    .text-container2 {
+        padding: 0.3rem 4rem;
+    }
+    
+/* Juster højden af .hero sektionen */
+    .hero {
+        height: 500px;
+    }
+    
+/* Juster bredden af billedet i .bryg__kollage sektionen */
+    .bryg__kollage img {
+        width: 500px;
+        margin: auto;
+        margin: 1em;
+    }
+
+/* Juster knappens justering i .bryg__kollage sektionen */
+    .bryg__kollage button {
+        justify-self: center;
+    }
+
+/* Juster padding og skriftstørrelse af tekstafsnittet i .øl__hero sektionen */
+    .øl__hero p {
+        padding: 1em 5em;
+        font-size: 1em;
+    }
+
+/* Juster skriftstørrelse af .img-title */
+    .img-title {
+        font-size: 2rem;
+    }
+}
+
+/*-- small Desktop --*/
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 100%;
+    }
+
+/* Juster skriftstørrelse af #overskrift1 */
+    #overskrift1 {
+        font-size: 3em;
+    }
+
+/* Ændr layoutet til et grid med to kolonner i .bryg__container sektionen */
+    .bryg__container {
+        display: grid;
+        height: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "øl flereøl";
+        padding: 0 0;
+    }
+
+/* Juster layoutet af .øl_container og .flereøl_container sektioner */
+    .øl_container,
+    .øl_container {
+        display: grid;
+        grid-area: øl;
+        justify-self: center;
+    }
+
+
+    .flereøl_container {
+        display: grid;
+        grid-area: flereøl;
+        justify-self: center;
+    }
+
+
+    .øl_container,
+    .flereøl_container,
+    .text-container1,
+    .text-container2 {
+        padding: 0 2rem;
+    }
+
+    /* Juster skriftstørrelse af .underoverskrift1 */
+    .underoverskrift1 {
+        font-size: 1.5rem;
+    }
+
+    /* Juster skriftstørrelse af #overskrift2 */
+    #overskrift2 {
+        font-size: 3em;
+    }
+
+    /* Juster bredden af billedet i .bryg__kollage sektionen */
+    .bryg__kollage img {
+        width: 350px;
+        margin: 2em auto;
+    }
+
+    /* Juster padding og skriftstørrelse af tekstafsnittet i .øl__hero sektionen */
+    .øl__hero p {
+        padding: 2em 9em;
+        font-size: 1.1em;
+    }
+
+    /* Juster skriftstørrelse af .foot__links */
+    .foot__links {
+        font-size: 1em;
+    }
+
+    /* Juster polstring af .foot__pages sektionen */
+    .foot__pages {
+        padding: 10% 20% 20% 20%;
+    }
+
+    /* Skjul .foot__pages sektionen og vis .foot__pages2 sektionen */
+    .foot__pages {
+        display: none;
+    }
+
+    .foot__pages2 {
+        background-color: var(--clr-grey);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Juster layoutet af .foot__tilpas sektionen */
+    .foot__tilpas {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        text-align: start;
+        padding: 2rem 2rem;
+        width: 1024px;
+        margin: auto;
+    }
+
+    /* Animer underline på links i .foot__tilpas sektionen */
+    .foot__tilpas a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: var(--clr-white);
+        transition: width 0.4s;
+    }
+
+    .foot__tilpas a:hover::after {
+        width: 100%;
+    }
+
+    /* Juster padding og bredde af forskellige sektioner i .foot__pages2 sektionen */
+    .foot-1 p,
+    .foot-2 p,
+    .foot-3 p,
+    .foot-4 p {
+        padding: 0.5rem;
+        width: 231px;
+    }
+
+    /* Juster layoutet og polstring af .foot-info sektionen */
+    .foot-info {
+        width: 1024px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    /* Juster polstring og skriftstørrelse af celler i .foot-info sektionen */
+    .foot-info td {
+        padding: 0 2.5rem;
+        font-size: 0.75em;
+    }
+}
+
+/*-- Large Desktop --*/
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 100%;
+    }
+
+    /* Juster bredden af navmenu img */
+    .navmenu img {
+        width: 170px;
+    }
+
+    /* Juster højden af .hero sektionen */
+    .hero {
+        height: 700px;
+    }
+
+
+    /* Juster padding af #overskrift1 sektionen */
+    #overskrift1 {
+        padding: 8rem;
+    }
+
+    /* Juster skriftstørrelse af .underoverskrift1 */
+    .underoverskrift1 {
+        font-size: 1.7rem;
+    }
+
+    /* Juster skriftstørrelse og padding af #overskrift2 sektionen */
+    #overskrift2 {
+        font-size: 3em;
+        padding-top: 2em;
+    }
+
+    /* Juster bredde og padding af .grey-button sektionen */
+    .grey-button {
+        width: 15em;
+        padding: 1em 1.5em;
+    }
+
+    /* Ændr layoutet til et grid med tre kolonner og to rækker i .bryg__kollage sektionen */
+    .bryg__kollage {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "citrus hindbærstrøm mørkmumme" "fysnkipa hyldehopipa mangoipa";
+    }
+
+    /* Juster bredden af billedet i .bryg__kollage sektionen */
+    .bryg__kollage img {
+        width: 600px;
+        margin: 2em auto;
+    }
+
+    /* Juster knappens justering i .bryg__kollage sektionen */
+    .bryg__kollage button {
+        justify-self: center;
+    }
+
+    /* Bryg-områder til forskellige billeder i .bryg__kollage sektionen */
+    .bryg1 {
+        grid-area: citrus;
+    }
+
+    .bryg2 {
+        grid-area: hindbærstrøm;
+    }
+
+    .bryg3 {
+        grid-area: mørkmumme;
+    }
+
+    .bryg4 {
+        grid-area: fysnkipa;
+    }
+
+    .bryg5 {
+        grid-area: hyldehopipa;
+    }
+
+    .bryg6 {
+        grid-area: mangoipa;
+    }
+
+    /* Juster skriftstørrelse af tekstafsnittet i .øl__hero sektionen */
+    .øl__hero p {
+        font-size: 1.1em;
+    }
+
+    /* Juster højden af .øl__hero img */
+    .øl__hero img {
+        height: 800px;
+    }
+
+    /* Juster skriftstørrelse af .foot__links */
+    .foot__links {
+        font-size: 1em;
+    }
+}
