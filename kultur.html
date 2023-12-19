@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="da">
+  <!-- Deklaration af dokumenttype og sprog -->
+  <head>
+    <!-- Metadata, titel, favicon, stilsheets og scriptreferencer -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Alkoholfri øl fra TrøjborgBryg" />
+    <meta name="keywords" content="bryggeri, alkholfri øl" />
+    <title>TrøjbrogBryg</title>
+    <link rel="icon" type="image/webp" href="images/logo2.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ekstern skrifttype fra Fontshare -->
+    <link
+      href="https://api.fontshare.com/v2/css?f%5B%5D=montserrat@500,700,701,801,200,401,301,400,601,100,101,201,800,300,600,501&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Script til mobilnavigation -->
+    <script src="m.nav.js"></script>
+  </head>
+  <body>
+    <!-- Header, hovedindhold, footer og tilbage-til-top knap -->
+    <header>
+      <!-- Navigationselementer, herunder logo, dropdowns og ikoner -->
+      <div class="navmenu" id="mynavmenu">
+        <div>
+          <!-- Logo -->
+          <a href="index.html"><img src="images/logo.webp" alt="logo" /></a>
+        </div>
+        <!-- Dropdown-menuer for forskellige sektioner -->
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Bryggeriet
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="om.html">Om os</a>
+            <a href="error.html">FAQ</a>
+            <a href="error.html">Levering</a>
+          </div>
+        </div>
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Vores øl
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="alkoholfri.html">Øl</a>
+            <a href="alkoholfri.html">Alkoholfrie øl</a>
+            <a href="alkoholfri.html">Nyeste udgivelser</a>
+            <a href="error.html">Øl-pakker</a>
+          </div>
+        </div>
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Sammen om smagen
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="kultur.html">Bæredygtig ølkultur</a>
+            <a href="ølogernæring.html">Øl og ernæring</a>
+            <a href="error.html">Ølklub</a>
+          </div>
+        </div>
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Kontakt
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="error.html">Sociale medier</a>
+            <a href="error.html">Telefonnummer</a>
+            <a href="error.html">E-mail</a>
+          </div>
+        </div>
+        <!-- Søge- og indkøbskurv ikoner -->
+        <div class="toplinje__icons">
+          <a href="error.html"
+            ><button class="toplinje__search" aria-label="Søg">
+              <!-- SVG-ikon for søgefunktion -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+                  clip-rule="evenodd"
+                />
+              </svg></button
+          ></a>
+          <a href="error.html"
+            ><button class="toplinje__shopping" aria-label="Indkøbskurv">
+              <!-- SVG-ikon for indkøbskurv -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+        <!-- Hamburger-ikon for mobilmenu -->
+        <a
+          href="javascript:void(0);"
+          style="font-size: 35px"
+          class="icon"
+          onclick="myFunction()"
+        >
+          &#9776;
+        </a>
+      </div>
+    </header>
+    <main>
+      <!-- Overskrift 1: Fremhæver fokus på bæredygtighed -->
+      <h1 id="overskrift1">Bæredygtighed i centrum af opmærksomheden</h1>
+      <!-- Sektion med billeder og korte beskrivelser af bæredygtige elementer -->
+      <section class="bryg__container">
+        <div class="øl_container">
+          <!-- Billede af humle som repræsentation af lokale råvarer -->
+          <img class="øl" src="images/humle.webp" alt="øl" />
+        </div>
+        <!-- Beskrivelse af brugen af lokale råvarer -->
+        <div class="text-container1">
+          <p>Lokale råvarer, der finder anvendelse i vores ølproduktion</p>
+        </div>
+        <!-- Billede af naturøl som repræsentation af genanvendelige materialer -->
+        <div class="flereøl_container">
+          <img class="flereøl" src="images/naturøl.webp" alt="flereøl" />
+        </div>
+        <!-- Beskrivelse af brugen af genanvendelige materialer i emballagen -->
+        <div class="text-container2">
+          <p>Emballagen er produceret ved brug af genanvendelige materialer</p>
+        </div>
+      </section>
+      <!-- Sektion med detaljeret information om bæredygtighedsinitiativer -->
+      <section class="container">
+        <div class="øl__hero">
+          <br />
+          <p>
+            <strong>Bæredygtige ingredienser</strong>
+            <br />
+            Vi henter vores ingredienser fra troværdige og bæredygtige kilder.
+            Dette indebærer brug af økologiske råvarer, når det er muligt, og en
+            vedvarende indsats for at reducere miljøpåvirkningen af vores
+            produktion.
+            <br />
+            <br />
+            <strong>Genanvendelse & genbrug</strong>
+            <br />Vi er forpligtede til at reducere vores affaldsaftryk. Derfor
+            implementerer vi strenge genanvendelses- og genbrugsprogrammer inden
+            for vores produktionsproces og opfordrer vores kunder til at deltage
+            i vores indsats for at bevare ressourcer.
+            <br />
+            <br />
+            <strong>Energi- og vandeffektivitet</strong>
+            <br />Vi investerer i bæredygtige teknologier og processer for at
+            minimere vores energi- og vandforbrug. Vores mål er at være så
+            ressourceeffektive som muligt uden at gå på kompromis med kvaliteten
+            af vores produkter.
+            <br />
+            <br />
+            <strong>Lokal samfundsstøtte</strong>
+            <br />Vi støtter lokale samfund ved at samarbejde med lokale
+            leverandører og organisationer. Dette bidrager ikke kun til lokal
+            økonomi, men mindsker også vores miljøaftryk ved at reducere
+            transportafstande.
+            <br />
+            <br />
+            <strong>Transparens og kommunikation</strong>
+            <br />Vi stræber efter åbenhed og kommunikation om vores
+            bæredygtighedsinitiativer. Ved at dele vores mål og fremskridt med
+            jer ønsker vi at skabe et fællesskab, der værdsætter og støtter en
+            mere bæredygtig livsstil.
+            <br />
+            <br />Vi er taknemmelige for jeres støtte, og vi ser frem til at
+            dele denne rejse mod bæredygtighed med jer. Sammen kan vi gøre en
+            forskel og nyde fantastiske smagsoplevelser på en måde, der
+            respekterer vores planet.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pop ud footer -->
+    <foot class="container">
+      <div class="foot__pages">
+        <div class="foot__w">
+          <div class="wrap-1">
+            <input type="radio" id="tab-1" name="tabs" />
+            <label for="tab-1">
+              <div>Lukket menu</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content"></div>
+          </div>
+          <div class="wrap-5">
+            <input type="radio" id="tab-5" name="tabs" />
+            <label for="tab-5">
+              <div>Bryggeriet</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="om.html">Om os</a>
+              <a href="error.html">FAQ</a>
+              <a href="error.html">Levering</a>
+            </div>
+          </div>
+          <div class="wrap-2">
+            <input type="radio" id="tab-2" name="tabs" />
+            <label for="tab-2">
+              <div>Vores øl</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="alkoholfri.html">Øl</a>
+              <a href="alkoholfri.html">Alkoholfrie øl</a>
+              <a href="alkoholfri.html">Nyeste udgivelser</a>
+              <a href="error.html">Øl-pakker</a>
+            </div>
+          </div>
+          <div class="wrap-3">
+            <input type="radio" id="tab-3" name="tabs" />
+            <label for="tab-3">
+              <div>Sammen om smagen</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="kultur.html">Bæredygtig ølkultur</a>
+              <a href="ølogernæring.html">Øl og ernæring</a>
+              <a href="error.html">Ølklub</a>
+            </div>
+          </div>
+          <div class="wrap-4">
+            <input type="radio" id="tab-4" name="tabs" />
+            <label for="tab-4">
+              <div>Kontakt</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="error.html">Sociale medier</a>
+              <a href="error.html">Telefonnummer</a>
+              <a href="error.html">E-mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer pages med åbne links -->
+
+      <div class="foot__pages2">
+        <div class="foot__tilpas">
+          <div class="foot-1">
+            <p>
+              <a href="#"><strong>Bryggeriet</strong></a>
+            </p>
+            <p><a href="om.html">Om os</a></p>
+            <p><a href="error.html">FA</a></p>
+            <p><a href="error.html">Levering</a></p>
+          </div>
+          <div class="foot-2">
+            <p>
+              <a href="error.html"><strong>Vores øl</strong></a>
+            </p>
+            <p><a href="alkoholfri.html">Øl</a></p>
+            <p><a href="alkoholfri.html">Alkoholfrie øl</a></p>
+            <p><a href="alkoholfri.html">Nyeste udgivelser</a></p>
+            <p><a href="error.html">Øl-pakker</a></p>
+          </div>
+          <div class="foot-3">
+            <p>
+              <a href="#"><strong>Sammen om smagen</strong></a>
+            </p>
+            <p>
+              <a href="kultur.html">Bæredygtig ølkultur</a>
+            </p>
+            <p><a href="ølogernæring.html">Øl og ernæring</a></p>
+            <p><a href="error.html">Ølklub</a></p>
+          </div>
+          <div class="foot-4">
+            <p>
+              <a href="#"><strong>Kontakt</strong></a>
+            </p>
+            <p><a href="error.html">Sociale medier</a></p>
+            <p><a href="error.html">Telefonnummer</a></p>
+            <p><a href="error.html">E-mail</a></p>
+          </div>
+        </div>
+      </div>
+    </foot>
+    <!-- Tilbage til toppen knap -->
+    <button id="toTopBtn">Tilbage til toppen</button>
+    <script src="m.nav.js"></script>
+  </body>
+</html>

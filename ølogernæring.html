@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="da">
+  <!-- Deklaration af dokumenttype og sprog -->
+  <head>
+    <!-- Metadata, titel, favicon, stilsheets og scriptreferencer -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Alkoholfri øl fra TrøjborgBryg" />
+    <meta name="keywords" content="bryggeri, alkholfri øl" />
+    <title>TrøjbrogBryg</title>
+    <link rel="icon" type="image/webp" href="images/logo2.webp" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Ekstern skrifttype fra Fontshare -->
+    <link
+      href="https://api.fontshare.com/v2/css?f%5B%5D=montserrat@500,700,701,801,200,401,301,400,601,100,101,201,800,300,600,501&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Script til mobilnavigation -->
+    <script src="m.nav.js"></script>
+  </head>
+  <body>
+    <!-- Header, hovedindhold, footer og tilbage-til-top knap -->
+    <header>
+      <!-- Navigationselementer, herunder logo, dropdowns og ikoner -->
+      <div class="navmenu" id="mynavmenu">
+        <div>
+          <!-- Logo -->
+          <a href="index.html"><img src="images/logo.webp" alt="logo" /></a>
+        </div>
+        <!-- Dropdown-menuer for forskellige sektioner -->
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Bryggeriet
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="om.html">Om os</a>
+            <a href="error.html">FAQ</a>
+            <a href="error.html">Levering</a>
+          </div>
+        </div>
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Vores øl
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="alkoholfri.html">Øl</a>
+            <a href="alkoholfri.html">Alkoholfrie øl</a>
+            <a href="alkoholfri.html">Nyeste udgivelser</a>
+            <a href="error.html">Øl-pakker</a>
+          </div>
+        </div>
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Sammen om smagen
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="kultur.html">Bæredygtig ølkultur</a>
+            <a href="ølogernæring.html">Øl og ernæring</a>
+            <a href="error.html">Ølklub</a>
+          </div>
+        </div>
+        <div class="skjultmenu">
+          <button class="skjulknap">
+            Kontakt
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="skjultmenu-content">
+            <a href="error.html">Sociale medier</a>
+            <a href="error.html">Telefonnummer</a>
+            <a href="error.html">E-mail</a>
+          </div>
+        </div>
+        <!-- Søge- og indkøbskurv ikoner -->
+        <div class="toplinje__icons">
+          <a href="error.html"
+            ><button class="toplinje__search" aria-label="Søg">
+              <!-- SVG-ikon for søgefunktion -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.5 3.75a6.75 6.75 0 100 13.5 6.75 6.75 0 000-13.5zM2.25 10.5a8.25 8.25 0 1114.59 5.28l4.69 4.69a.75.75 0 11-1.06 1.06l-4.69-4.69A8.25 8.25 0 012.25 10.5z"
+                  clip-rule="evenodd"
+                />
+              </svg></button
+          ></a>
+          <a href="error.html"
+            ><button class="toplinje__shopping" aria-label="Indkøbskurv">
+              <!-- SVG-ikon for indkøbskurv -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+              </svg>
+            </button>
+          </a>
+        </div>
+        <!-- Hamburger-ikon for mobilmenu -->
+        <a
+          href="javascript:void(0);"
+          style="font-size: 35px"
+          class="icon"
+          onclick="myFunction()"
+          >&#9776;</a
+        >
+      </div>
+    </header>
+    <main>
+      <!-- Sektion med præsentation af alkoholfrie øl og deres karakteristika -->
+      <section class="container">
+        <div class="øl__hero">
+          <section>
+            <section id="ølsilder">
+              <!-- Billedeslider med forskellige øltyper -->
+              <div class="img-slider">
+                <div class="slider-wrapper">
+                  <!-- Container med billeder af forskellige øl -->
+                  <div id="img-container-nova" class="img-container">
+                    <img src="images/citrusglæde.webp" alt="citrusglæde" />
+                    <img src="images/hindbærstrøm.webp" alt="hindbær" />
+                    <img src="images/mørkmumme.webp" alt="mørkmumme" />
+                    <img src="images/fynskipa.webp" alt="fynskipa" />
+                    <img src="images/hyldeipa.webp" alt="hyldeipa" />
+                    <img src="images/mangoipa.webp" alt="mangoipa" />
+                  </div>
+                </div>
+              </div>
+            </section>
+            <!-- Beskrivelse af ølsortimentet -->
+            <p>
+              Velkommen til vores smagsunivers, hvor vi præsenterer en
+              kollektion af forfriskende alkoholfrie øl, der vil tage dine
+              smagsløg med på en uovertruffen rejse.
+              <br />
+              <br />Lad os starte med <strong>Citrusglæde</strong> en
+              forfriskende perle brygget med omhu og kærlighed. Den kombinerer
+              saftige citroner og limer, og med kun 0,1% alkohol er den den
+              perfekte ledsager til solrige dage, afslappede grillfester eller
+              festlige lejligheder. Citrusglæde er ikke bare en drikkelse; det
+              er en kunstform af smag og kvalitet, som vi er stolte af at dele
+              med dig.
+              <br />
+              <br />Dyk derefter ned i <strong>Hindbærstrøm</strong>, vores
+              frugtige sensation uden alkoholsting. Den er en smagsrejse gennem
+              saftige hindbærmarker, og med kun 0,4% alkohol er den perfekt til
+              hyggelige aftener, lækre måltider og enhver tid, du vil forkæle
+              dine smagsløg. Hindbærstrøm er ikke blot en drikkelse; den er ren
+              forkælelse for dine smagsløg og den perfekte ledsager til intime
+              sammenkomster med gode venner.
+              <br />
+              <br />Oplev dybden af smagen med <strong>Mørk Mumme</strong>,
+              vores mørke skat brygget med solbær og hyben. Den er som en rejse
+              gennem en mystisk skov af komplekse smagsnuancer. Med en ydmyg
+              alkoholprocent på 0,3% er Mørk Mumme velegnet til mere formelle
+              lejligheder. Den er ikke bare en drikkelse; den er et udtryk for
+              raffinement og kvalitet, der tilføjer en sofistikeret note til
+              enhver begivenhed.
+              <br />
+              <br />Tag en smagsrejse med <strong>Fynsk IPA</strong>, vores
+              livlige bryg brygget med Cascade humle og havtorn. Denne
+              alkoholfrie øl er som et fyrværkeri af friskhed og aroma. Med en
+              moderat alkoholprocent på 0,5% er Fynsk IPA ikke bare en
+              drikkelse; det er en hyldest til smag og livsglæde. Perfekt til
+              udendørs sammenkomster, koncerter og enhver lejlighed, hvor smagen
+              står i centrum. Fynsk IPA tager dine smagsløg med på en rejse
+              gennem glæde og humle.
+              <br />
+              <br />Blomstrende smag venter på dig med
+              <strong>Hyldehop IPA</strong>, vores forfriskende bryg brygget med
+              hyldeblomst og saaz humle. Den er ikke bare en drikkelse; den er
+              et kunstværk af smagsnuancer og kvalitet. Med en let og
+              blomsteragtig karakter er Hyldehop IPA velegnet til picnics,
+              havefester og afslappede stunder med venner. Den er ikke bare en
+              drikkelse; den er en invitation til at opleve smagens blomstrende
+              skatkammer. Perfekt til enhver anledning, hvor du vil dele en
+              smagsfuld glæde med dem omkring dig.
+              <br />
+              <br />Gør din smagsoplevelse eksotisk med
+              <strong>Mango IPA</strong>, vores bryg brygget med mosaic humle og
+              moden mango. Denne alkoholfrie øl er som en tur til tropiske
+              himmelstrøg, hvor hver slurk er som en bid af solmoden mango. Med
+              en behagelig alkoholprocent på 0,4% er Mango IPA ikke bare en
+              drikkelse; det er en festlig rejse ind i smagens paradis. Perfekt
+              til sommerfester, strandudflugter og enhver lejlighed, hvor du vil
+              tilføje en smule tropisk glæde. Mango IPA er ikke blot en øl; det
+              er en invitation til at opleve festlige smagsoplevelser.
+            </p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <!-- Pop ud footer -->
+    <foot class="container">
+      <div class="foot__pages">
+        <div class="foot__w">
+          <div class="wrap-1">
+            <input type="radio" id="tab-1" name="tabs" />
+            <label for="tab-1">
+              <div>Lukket menu</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content"></div>
+          </div>
+          <div class="wrap-5">
+            <input type="radio" id="tab-5" name="tabs" />
+            <label for="tab-5">
+              <div>Bryggeriet</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="om.html">Om os</a>
+              <a href="error.html">FAQ</a>
+              <a href="error.html">Levering</a>
+            </div>
+          </div>
+          <div class="wrap-2">
+            <input type="radio" id="tab-2" name="tabs" />
+            <label for="tab-2">
+              <div>Vores øl</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="alkoholfri.html">Øl</a>
+              <a href="alkoholfri.html">Alkoholfrie øl</a>
+              <a href="alkoholfri.html">Nyeste udgivelser</a>
+              <a href="error.html">Øl-pakker</a>
+            </div>
+          </div>
+          <div class="wrap-3">
+            <input type="radio" id="tab-3" name="tabs" />
+            <label for="tab-3">
+              <div>Sammen om smagen</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="kultur.html">Bæredygtig ølkultur</a>
+              <a href="ølogernæring.html">Øl og ernæring</a>
+              <a href="error.html">Ølklub</a>
+            </div>
+          </div>
+          <div class="wrap-4">
+            <input type="radio" id="tab-4" name="tabs" />
+            <label for="tab-4">
+              <div>Kontakt</div>
+              <div class="kryds"></div>
+            </label>
+            <div class="content">
+              <a href="error.html">Sociale medier</a>
+              <a href="error.html">Telefonnummer</a>
+              <a href="error.html">E-mail</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer pages med åbne links -->
+
+      <div class="foot__pages2">
+        <div class="foot__tilpas">
+          <div class="foot-1">
+            <p>
+              <a href="#"><strong>Bryggeriet</strong></a>
+            </p>
+            <p><a href="om.html">Om os</a></p>
+            <p><a href="error.html">FA</a></p>
+            <p><a href="error.html">Levering</a></p>
+          </div>
+          <div class="foot-2">
+            <p>
+              <a href="error.html"><strong>Vores øl</strong></a>
+            </p>
+            <p><a href="alkoholfri.html">Øl</a></p>
+            <p><a href="alkoholfri.html">Alkoholfrie øl</a></p>
+            <p><a href="alkoholfri.html">Nyeste udgivelser</a></p>
+            <p><a href="error.html">Øl-pakker</a></p>
+          </div>
+          <div class="foot-3">
+            <p>
+              <a href="#"><strong>Sammen om smagen</strong></a>
+            </p>
+            <p>
+              <a href="kultur.html">Bæredygtig ølkultur</a>
+            </p>
+            <p><a href="ølogernæring.html">Øl og ernæring</a></p>
+            <p><a href="error.html">Ølklub</a></p>
+          </div>
+          <div class="foot-4">
+            <p>
+              <a href="#"><strong>Kontakt</strong></a>
+            </p>
+            <p><a href="error.html">Sociale medier</a></p>
+            <p><a href="error.html">Telefonnummer</a></p>
+            <p><a href="error.html">E-mail</a></p>
+          </div>
+        </div>
+      </div>
+    </foot>
+    <!-- Tilbage til toppen knap -->
+    <button id="toTopBtn">Tilbage til toppen</button>
+    <script src="m.nav.js"></script>
+  </body>
+</html>
